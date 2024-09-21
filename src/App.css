@@ -516,3 +516,7 @@ input:active, input:focus{
   width: fit-content;
   height: 210px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
