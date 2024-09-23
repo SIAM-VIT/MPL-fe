@@ -308,11 +308,15 @@ input:active, input:focus{
 .headerRow{
   background-color: var(--Secondary);
   color: white;
-}
+} 
 
 .tbl th, .tbl td{
   padding: 8px;
 }
+
+/* td{
+  background-color: white;
+} */
 
 .headerRow th{
   border: 1px solid white;
@@ -347,8 +351,14 @@ input:active, input:focus{
 }
 
 .tbl .bold{
+  /* background-color: white; */
   text-align: center;
 }
+tbody tr:first-child {
+  background-color: purple;
+  color: white;
+}
+
 
 #leaderboardtable th, #leaderboardtable td{
   padding: 8px 24px;

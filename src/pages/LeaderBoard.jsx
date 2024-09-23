@@ -8,7 +8,6 @@ export default function Leaderboard() {
     fetch('https://mpl-be-p5xf.onrender.com/teams/getTeamsByScore')
       .then((response) => response.json())
       .then((data) => {
-        // Sort teams by score in descending order
         const sortedTeams = data.sort((a, b) => b.score - a.score);
         setTeams(sortedTeams);
       })
@@ -24,7 +23,6 @@ export default function Leaderboard() {
           <div id="clueSection" className="flex row">
          
             <div id="leadertableSection">
-              {/* Render full leaderboard */}
               <table className="tbl" id="leaderboardtable">
                 <thead>
                   <tr className="headerRow">
@@ -36,7 +34,7 @@ export default function Leaderboard() {
                 <tbody>
                   {teams.map((team, index) => (
                     <tr key={team.team_id}>
-                      <td className="bold">{index + 1}</td>
+                      <td className="bold" >{index + 1}</td>
                       <td>{team.team_name}</td>
                       <td>{team.score.toLocaleString()} Points</td>
                     </tr>

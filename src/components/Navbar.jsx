@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';  // Add this line to import the CSS
+import './Navbar.css';  
 import logo from '../assets/MPLlogo.svg';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ export default function Navbar() {
 
   function handleNavClick(e, path) {
     nav(path);
-    setIsMenuOpen(false); // Close the menu after clicking
+    setIsMenuOpen(false); 
   }
 
   function toggleMenu() {
@@ -20,7 +20,6 @@ export default function Navbar() {
     <div id="navBar" className='flex row space-between'>
       <img src={logo} id='mplLogo' alt="MPL Logo" />
       <div className="hamburgerMenu" onClick={toggleMenu}>
-        {/* Hamburger Icon */}
         <span></span>
         <span></span>
         <span></span>
