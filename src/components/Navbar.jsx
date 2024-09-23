@@ -1,18 +1,31 @@
-import React from 'react'
-import logo from '../assets/MPLlogo.svg'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import './Navbar.css';  // Add this line to import the CSS
+import logo from '../assets/MPLlogo.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const nav = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function handleNavClick(e, path){
-    nav(path); 
+  function handleNavClick(e, path) {
+    nav(path);
+    setIsMenuOpen(false); // Close the menu after clicking
+  }
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
   }
 
   return (
     <div id="navBar" className='flex row space-between'>
-      <img src={logo} id='mplLogo' alt="MPL Logo"/>
-      <div id="menuBox" className='flex row centerVH'>
+      <img src={logo} id='mplLogo' alt="MPL Logo" />
+      <div className="hamburgerMenu" onClick={toggleMenu}>
+        {/* Hamburger Icon */}
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="menuBox" className={`flex row centerVH ${isMenuOpen ? 'open' : ''}`}>
         <p className='menuItem' onClick={(e) => handleNavClick(e, '/home')}>Home</p>
         <p className='menuItem' onClick={(e) => handleNavClick(e, '/leaderboard')}>Leaderboard</p>
         <p className='menuItem selectedMenuItem' onClick={(e) => handleNavClick(e, '/treasure-hunt')}>Treasure Hunt</p>

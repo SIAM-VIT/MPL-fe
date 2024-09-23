@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 export default function Leaderboard() {
   const [teams, setTeams] = useState([]);
 
-  // Fetch teams data from the API
   useEffect(() => {
     fetch('https://mpl-be-p5xf.onrender.com/teams/getTeamsByScore')
       .then((response) => response.json())
@@ -23,20 +22,7 @@ export default function Leaderboard() {
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Leaderboard</p>
           <div id="clueSection" className="flex row">
-            <div id="leaderboardContainer" className="flex column">
-              {/* Render top 3 teams */}
-              {teams.slice(0, 3).map((team, index) => (
-                <div key={team.team_id} className="leaderBox flex row">
-                  <div id={`rank${index + 1}`} className="rankBox flex centerVH">
-                    <p className="rank">{index + 1}</p>
-                  </div>
-                  <div className="rankDetailBox flex column centerVH">
-                    <button className="btn_lite purpleShade">{team.team_name}</button>
-                    <p className="bold">{team.score.toLocaleString()} Pts.</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+         
             <div id="leadertableSection">
               {/* Render full leaderboard */}
               <table className="tbl" id="leaderboardtable">
