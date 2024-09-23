@@ -357,6 +357,7 @@ input:active, input:focus{
 tbody tr:first-child {
   background-color: purple;
   color: white;
+  border-right: #fff;
 }
 
 

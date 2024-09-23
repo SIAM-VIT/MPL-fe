@@ -34,7 +34,7 @@ export default function Leaderboard() {
                 <tbody>
                   {teams.map((team, index) => (
                     <tr key={team.team_id}>
-                      <td className="bold" >{index + 1}</td>
+                      <td className="bold">{index + 1}</td>
                       <td>{team.team_name}</td>
                       <td>{team.score.toLocaleString()} Points</td>
                     </tr>
