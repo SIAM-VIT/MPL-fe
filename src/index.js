@@ -10,8 +10,6 @@ import Treasurehunt from './pages/Treasurehunt';
 import Jeopardysections from './pages/JeopardySections';
 import Team from './pages/Team';
 import JeopardyQuestions from './pages/JeopardyQuestions';
-import Admin from './pages/Admin';
-
 const router = createBrowserRouter([
   {
     path: "/",        
@@ -26,36 +24,15 @@ const router = createBrowserRouter([
     element: <Leaderboard />
   },
   {
-    path: "/treasure-hunt",        
-    element: <Treasurehunt />
-  },
-  {
-    path: "/jeopardy",        
-    element: <Jeopardysections />
-  },
-  {
-    path: "/admin",        
-    element: <Admin />
-  },
-  {
-    path: "/teams",        
-    element: <Team />
-  },
-  {
-    path: "/question",        
-    element: <JeopardyQuestions />
-  },
-  {
     path: "*",        
     element: <Homepage />
   },
-  
-  ]);
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 
