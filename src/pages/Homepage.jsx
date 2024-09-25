@@ -15,7 +15,7 @@ export default function Homepage() {
             <Link to="/leaderboard"> {/* Wrap button in Link */}
               <button className='btn roundBtn purpleShade'>
                 Leaderboard
-              </button>
+              </button>0.............
             </Link>
             {/* <p className='btnUnderline'>Create Your Team</p> */}
           </div>
