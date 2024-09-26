@@ -1,424 +1,438 @@
-body{
-  font-family: "Inter", system-ui;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", system-ui;
   font-optical-sizing: auto;
   font-style: normal;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-a{
+* {
+  font-family: "Poppins", system-ui;
+}
+
+a {
   text-decoration: none;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 4px;
   background-color: var(--Secondary);
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.row{
+.row {
   flex-direction: row;
 }
 
-.column{
+.column {
   flex-direction: column;
 }
 
-.space-between{
+.space-between {
   justify-content: space-between;
 }
 
-.space-around{
+.space-around {
   justify-content: space-around;
 }
 
-.align_items_center{
+.align_items_center {
   align-items: center;
 }
 
-.justify_content_center{
+.justify_content_center {
   justify-content: center;
 }
 
-.centerVH{
+.centerVH {
   align-items: center;
   justify-content: center;
 }
 
-.align_right{
-  align-items:flex-end;
+.align_right {
+  align-items: flex-end;
 }
 
-.gap_24{
+.gap_24 {
   gap: 24px;
 }
 
-.fwrap{
+.fwrap {
   flex-wrap: wrap;
 }
 
 /* Global Colors */
-#Container{
- --Primary: #fafafa;
- --Secondary: #ad2dcd;
- --SecondaruyDark: #6f1d84; 
- --text: #343434;
- --accent: #ffdb1c;
- --textWhite: #ffffff;
- --defaultBoxShadow: 0px 2px 2px #343434a2;
- --primaryDark: #989898;
- --primaryDarkv2: #f2f2f2;
+#Container {
+  --Primary: #fafafa;
+  --Secondary: #ad2dcd;
+  --SecondaruyDark: #6f1d84;
+  --text: #343434;
+  --accent: #ffdb1c;
+  --textWhite: #ffffff;
+  --defaultBoxShadow: 0px 2px 2px #343434a2;
+  --primaryDark: #989898;
+  --primaryDarkv2: #f2f2f2;
 }
 
-#Container{
+#Container {
   height: 100svh;
   background-color: #fafafa;
   margin: 2px 2px 0 2px;
   color: var(--text);
 }
 
-#navBar{
+#navBar {
   background-color: var(--Secondary);
   border-radius: 6px;
-  padding:0 24px;
+  padding: 0 24px;
   box-shadow: var(--defaultBoxShadow);
+  align-items: center;
 }
 
-#menuBox{
+#menuBox {
   color: var(--textWhite);
-  font-size: 14px;
-  gap: 18px;
+  font-size: 20px;
+  gap: 30px;
 }
 
 .selectedMenuItem {
   color: var(--accent) !important;
 }
 
-.menuItem{
+.menuItem {
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
-.menuItem a{
+.menuItem a {
   color: var(--textWhite);
 }
 
-.btn{
-  padding: 12px 18px;
+.btn {
+  padding: 12px 14px;
   border: none;
   outline: none;
+  font-size: 17px;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   width: fit-content;
   transition: all 0.3s ease-in-out;
 }
 
-.justify_content_right{
+.justify_content_right {
   justify-content: right;
 }
 
-.btn_lite{
-  font-size: 12px;
-  padding:8px 18px;
+.btn_lite {
+  font-size: 15px;
+  padding: 10px 20px;
   border: none;
   outline: none;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-.formPoints{
+.formPoints {
   width: 40% !important;
 }
 
-.roundBtn{
+.roundBtn {
   border-radius: 24px;
 }
 
-.accentShade{
+.accentShade {
   background-color: var(--accent);
   color: var(--SecondaruyDark);
 }
 
-.purpleShade{
-  background-color:var(--Secondary) ;
+.purpleShade {
+  background-color: var(--Secondary);
   color: var(--textWhite);
 }
 
-.btnUnderline{
+.btnUnderline {
   text-decoration: underline;
   font-weight: bold;
   color: var(--Secondary);
   cursor: pointer;
 }
 
-.patternBg{
+.patternBg {
   background: url(./assets/bgPattern.png);
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
-.purpleText{
+.purpleText {
   color: var(--Secondary);
 }
 
-.greenShade{
+.greenShade {
   background-color: #00cd21;
   color: var(--textWhite);
 }
 
-.redShade{
+.redShade {
   background-color: #fe4949;
   color: var(--textWhite);
 }
 
-#bodyContainer{
+#bodyContainer {
   flex-grow: 1;
   padding: 24px;
   gap: 120px;
   color: var(--text);
 }
 
-#heroTextSection{
+#heroTextSection {
   gap: 24px;
 }
 
-.heroHeadText{
+.heroHeadText {
   font-size: 72px;
   font-weight: bold;
+  text-decoration: underline;
 }
 
-.heroSubText{
+.heroSubText {
   font-size: 16px;
   font-weight: 300;
 }
 
-#heroImageSection{
+#heroImageSection {
   background: url(./assets/bgPattern.png);
   background-size: contain;
   background-position: center center;
   height: 100%;
+  max-width: 100%;
 }
 
-#btnHolder{
+#btnHolder {
   gap: 24px;
 }
 
-#huntSection{
+#huntSection {
   flex-grow: 1;
   gap: 24px;
 }
 
-#clueSection{
+#clueSection {
   gap: 72px;
 }
 
-#bgSection{
+#bgSection {
   height: 30%;
-} 
+  width: 103%;
+  margin-bottom: -7svw;
+}
 
-.titleHeadText{
+.titleHeadText {
   font-size: 28px;
   font-weight: bold;
+  text-decoration: underline;
 }
 
-.inputBoxContainer{
-  gap: 48px;
+.inputBoxContainer {
+  gap: 55px;
 }
 
-.inputTitle{
+.inputboxcontainer {
+  gap: 25px;
+}
+
+.inputTitle {
   font-size: 20px;
   font-weight: bold;
 }
 
-.inputBox{
-  padding:  8px 12px;
+.inputBox {
+  padding: 10px 5px;
   font-size: 14px;
   border: 1px solid var(--Secondary);
-  width: 20svw;
+  width: 36svw;
+  border-radius: 5px;
 }
 
-#clueForm{
+#clueForm {
   gap: 24px;
+  width: 100%;
 }
 
-input:active, input:focus{
+input:active,
+input:focus {
   border: 1px solid royalblue;
   outline: 1px solid var(--Secondary);
 }
 
-#clueFormBtnContainer{
-  gap: 24px;
-  justify-content: right;
+#clueFormBtnContainer {
+  gap: 25px;
+  justify-content: space-evenly;
+  margin-top: 3svh;
+  margin-left: 3svw;
 }
 
-#clueBoxContainer{
+#clueBoxContainer {
   gap: 12px;
 }
 
-.clueBox{
+.clueBox {
   width: 47px;
   height: 47px;
   text-align: center;
   color: var(--textWhite);
   font-weight: bold;
-  font-size:24px;
+  font-size: 24px;
   cursor: pointer;
 }
 
-#Cbox1{
+#Cbox1 {
   background-color: #3c0095;
 }
-#Cbox2{
+#Cbox2 {
   background-color: #8e0071;
 }
-#Cbox3{
+#Cbox3 {
   background-color: #f6c136;
 }
-#Cbox4{
+#Cbox4 {
   background-color: #007178;
 }
-#Cbox5{
+#Cbox5 {
   background-color: #ad2dcd;
 }
 
-.clueBoxDisabled{
+.clueBoxDisabled {
   background-color: var(--primaryDark) !important;
 }
 
-.errorMessage{
+.errorMessage {
   color: red;
   display: block;
-  align-self:flex-end;
+  align-self: flex-end;
   font-size: 14px;
 }
 
-.tbl{
+.tbl {
   border: 2px solid var(--Secondary);
   box-shadow: var(--defaultBoxShadow);
   border-collapse: collapse;
 }
 
-.headerRow{
+.headerRow {
   background-color: var(--Secondary);
   color: white;
-} 
+}
 
-.tbl th, .tbl td{
+.tbl th,
+.tbl td {
   padding: 8px;
 }
 
-/* td{
-  background-color: white;
-} */
-
-.headerRow th{
+.headerRow th {
   border: 1px solid white;
 }
 
-.tbl td{
+.tbl td {
   border-left: 1px solid var(--Secondary);
   border-right: 1px solid var(--Secondary);
 }
 
-#aboutSection{
+#aboutSection {
   gap: 24px;
   flex-basis: 50%;
 }
 
-#detailContainer{
+#detailContainer {
   gap: 10px;
 }
 
-.detailBox{
+.detailBox {
   gap: 12px;
 }
 
-.descText{
+.descText {
   font-size: 16px;
 }
 
-#leadertableSection{
+#leadertableSection {
   height: 69vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   border-bottom: 2px solid var(--Secondary);
 }
 
-.tbl .bold{
-  /* background-color: white; */
+.tbl .bold {
   text-align: center;
 }
-tbody tr:first-child {
-  background-color: purple;
-  color: white;
-  border-right: #fff;
-}
 
-
-#leaderboardtable th, #leaderboardtable td{
+#leaderboardtable th,
+#leaderboardtable td {
   padding: 8px 24px;
+  /* margin-bottom: 20px; */
 }
 
-#leaderboardtable tr:first-child{
+#leaderboardtable tr:first-child {
   background-color: var(--Secondary) !important;
 }
 
-#leaderboardtable tr:nth-child(odd){
+#leaderboardtable tr:nth-child(odd) {
   background-color: var(--primaryDarkv2);
 }
 
-#leaderboardContainer{
-  gap: 12px ;
+#leaderboardContainer {
+  gap: 12px;
 }
 
-.leaderBox{
+.leaderBox {
   background-color: var(--Primary);
   box-shadow: var(--defaultBoxShadow);
 }
 
-.rankBox{
+.rankBox {
   width: 120px;
   height: 140px;
   color: white;
 }
 
-.rank{
+.rank {
   font-size: 60px;
   font-weight: 900;
 }
 
-#rank1{
-  background-color: #9358EB;
+#rank1 {
+  background-color: #9358eb;
 }
 
-#rank2{
-  background-color: #E14BC3;
+#rank2 {
+  background-color: #e14bc3;
 }
 
-#rank3{
+#rank3 {
   background-color: #ad2dcd;
 }
 
-.rankDetailBox{
+.rankDetailBox {
   background: url(./assets/bgPattern.png);
   padding: 24px 36px;
 }
 
-#topicContainer{
+#topicContainer {
   gap: 36px;
 }
 
-#generalTopicContainer{
+#generalTopicContainer {
   gap: 36px;
 }
 
-.topicBox{
+.topicBox {
   background-color: #8e0071;
   width: 140px;
   height: 190px;
@@ -430,7 +444,7 @@ tbody tr:first-child {
   transition: all 0.3s ease-in-out;
 }
 
-.buzzerBox{
+.buzzerBox {
   width: 220px;
   height: 420px;
   border-radius: 8px;
@@ -441,42 +455,42 @@ tbody tr:first-child {
   transition: all 0.3s ease-in-out;
 }
 
-.topicText{
+.topicText {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--textWhite);
   font-size: 18px;
 }
 
-#topic1{
+#topic1 {
   background-color: #8e0071;
 }
 
-#topic2{
+#topic2 {
   background-color: #71008d;
 }
 
-#topic3{
+#topic3 {
   background-color: #d69a00;
 }
 
-#topic4{
+#topic4 {
   background-color: #2e4f6d;
 }
 
-#topic5{
+#topic5 {
   background-color: #007178;
 }
 
-#topic6{
+#topic6 {
   background-color: #b42247;
 }
 
-#questionBoxContainer{
+#questionBoxContainer {
   gap: 24px;
 }
 
-.questionBox{
+.questionBox {
   background-color: #007178;
   width: 140px;
   height: 190px;
@@ -488,46 +502,147 @@ tbody tr:first-child {
   transition: all 0.3s ease-in-out;
 }
 
-.scoreBox{
+.scoreBox {
   gap: 4px;
 }
 
-.scoreBox button{
+.scoreBox button {
   font-size: 18px;
   font-weight: bold;
 }
 
-.scoreBox input{
+.scoreBox input {
   width: 13svw;
 }
 
+.heroHeadText1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
 /* Events  */
-.menuItem:hover{
+.menuItem:hover {
   transform: scale(1.05);
 }
 
-.btn:hover, .btn_lite:hover, .topicBox:hover, .buzzerBox:hover, .questionBox:hover{
+.btn:hover,
+.btn_lite:hover,
+.topicBox:hover,
+.buzzerBox:hover,
+.questionBox:hover {
   box-shadow: var(--defaultBoxShadow);
   transform: scale(1.03);
 }
 
 /* Absolute Reference */
-#mplLogo{
-  height: 74px;
+#mplLogo {
+  height: 120px;
   width: fit-content;
   cursor: pointer;
 }
 
-#puzzleImage{
+#puzzleImage {
   width: fit-content;
   height: 60vh;
 }
 
-#eventFlowImg{
+#eventFlowImg {
   width: fit-content;
   height: 210px;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@media screen and (max-width: 600px) {
+  /* #heroImageSection {
+    background: url(./assets/bgPattern.png);
+    background-size: contain;
+    background-position: center center;
+    height: 100%;
+    margin: auto;
+    left: 100%;
+  } */
+
+  .heroHeadText {
+    width: 98.5vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    text-decoration: underline;
+  }
+
+  .inputBoxContainer {
+    gap: 55px;
+  }
+
+  #menuBox {
+    color: var(--textWhite);
+    font-size: 15px;
+    gap: 20px;
+  }
+
+  .heroHeadText1 {
+    width: 98.5vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    text-decoration: underline;
+  }
+
+  #Container {
+    width: 100svw;
+    /* height: 100%; */
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    touch-action: manipulation;
+  }
+
+  #btnHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 3.5svh;
+    margin-right: 7.5svw;
+  }
+
+  .heroSubText {
+    margin: 0px 25px 0px 0px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 6svh;
+  }
+
+  #heroTextSection {
+    height: 70vh;
+    width: 98.5vw;
+    position: absolute;
+    top: 15%;
+    text-align: justify;
+    font-weight: bold;
+    margin-right: auto;
+  }
+
+  #puzzleImage {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.2;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+  }
+
+  #mplLogo {
+    height: 10svh;
+    width: fit-content;
+    cursor: pointer;
+  }
+}
